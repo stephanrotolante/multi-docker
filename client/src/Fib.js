@@ -40,7 +40,9 @@ class Fib extends Component {
         this.setState({ index: '' });
     }
     renderSeenIndexes() {
-        return this.state.seenIndexes.map(({number}) => number).join(', ');
+
+        const { seenIndexes = [] } = this.state;
+        return seenIndexes.map(({number}) => number).join(', ');
     }
 
     renderValues() {
